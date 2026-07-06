@@ -1,8 +1,8 @@
-# KozbenSal - Eye Tracking Drawing Application
+# Veya - Eye Tracking Drawing Application
 
-**Умные очки с eye-tracking для управления компьютером без рук**
+**First Version - v1.0**
 
-Проект позволяет людям с ограниченными двигательными функциями рисовать, печатать и управлять компьютером с помощью движений глаз.
+Eye-tracking drawing application that allows people with motor disabilities to draw and control computers using eye movements.
 
 ## 🏆 Достижения
 
