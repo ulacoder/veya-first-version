@@ -4,138 +4,146 @@
 
 Eye-tracking drawing application that allows people with motor disabilities to draw and control computers using eye movements.
 
-## 🏆 Достижения
+Приложение с eye-tracking, которое позволяет людям с ограниченными двигательными функциями рисовать и управлять компьютером с помощью движений глаз.
+
+## 🏆 Achievements / Достижения
 
 - 🥈 **2nd place WRO 2026 Regional**
-- Assistive technology для людей с моторными нарушениями
-- Доступная альтернатива дорогим коммерческим решениям
+- Assistive technology for people with motor disabilities / Assistive technology для людей с моторными нарушениями
+- Affordable alternative to expensive commercial solutions / Доступная альтернатива дорогим коммерческим решениям
 
-## ✨ Возможности
+## ✨ Features / Возможности
 
-- **Eye Tracking** - отслеживание движений глаз в реальном времени
-- **Калибрация** - точное сопоставление координат глаз с экраном (9-точечная калибрация)
-- **Рисование** - управление курсором взглядом, рисование с помощью "dwell time" (задержки взгляда)
-- **Интуитивный интерфейс** - никаких сложных настроек, все работает из коробки
+- **Eye Tracking** - Real-time eye movement detection / Отслеживание движений глаз в реальном времени
+- **Calibration** - Precise eye-to-screen coordinate mapping (9-point calibration) / Точное сопоставление координат глаз с экраном (9-точечная калибровка)
+- **Drawing** - Gaze-controlled cursor, dwell-time based drawing / Управление курсором взглядом, рисование с помощью "dwell time" (задержки взгляда)
+- **Intuitive Interface** - No complex setup, works out of the box / Никаких сложных настроек, все работает из коробки
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start / Быстрый старт
 
-### Установка
+### Installation / Установка
 
 ```bash
-# Клонировать репозиторий
-cd kozbensal-python
+# Clone the repository / Клонировать репозиторий
+git clone https://github.com/ulacoder/veya-first-version.git
+cd veya-first-version
 
-# Установить зависимости
+# Install dependencies / Установить зависимости
 pip install -r requirements.txt
 ```
 
-### Запуск
+### Launch / Запуск
 
 ```bash
 python main.py
 ```
 
-## 🎮 Управление
+## 🎮 Controls / Управление
 
-### Общие команды
-- `TAB` - переключение между калибровкой и рисованием
-- `R` - сброс калибровки
-- `P` - пауза/продолжить
-- `E` - показать/скрыть превью камеры
-- `ESC` - выход
+### General Commands / Общие команды
+- `TAB` - Switch between calibration and drawing / Переключение между калибровкой и рисованием
+- `R` - Reset calibration / Сброс калибровки
+- `P` - Pause/unpause / Пауза/продолжить
+- `E` - Toggle eye preview / Показать/скрыть превью камеры
+- `ESC` - Exit / Выход
 
-### Режим рисования
-- `U` - отменить последний штрих
-- `C` - очистить холст
-- `G` - показать/скрыть сетку
-- `S` - сохранить рисунок
+### Drawing Mode / Режим рисования
+- `U` - Undo last stroke / Отменить последний штрих
+- `C` - Clear canvas / Очистить холст
+- `G` - Toggle grid / Показать/скрыть сетку
+- `S` - Save drawing / Сохранить рисунок
 
-### Рисование взглядом
-1. Смотрите на точку где хотите начать рисовать
-2. Задержите взгляд на 1.5 секунды (появится зеленый индикатор)
-3. Начнется рисование - двигайте взглядом
-4. Задержите взгляд снова чтобы остановить рисование
+### Drawing with Gaze / Рисование взглядом
+1. Look at the point where you want to start drawing / Смотрите на точку где хотите начать рисовать
+2. Hold your gaze for 1.5 seconds (green indicator will appear) / Задержите взгляд на 1.5 секунды (появится зеленый индикатор)
+3. Drawing will begin - move your gaze / Начнется рисование - двигайте взглядом
+4. Hold your gaze again to stop drawing / Задержите взгляд снова чтобы остановить рисование
 
-## 🏗️ Архитектура
+## 🏗️ Architecture / Архитектура
 
 ```
-kozbensal-python/
-├── eye_tracker.py          # Eye tracking с MediaPipe
-├── calibration_manager.py  # Калибровка координат
-├── drawing_canvas.py       # Холст для рисования
-├── main.py                 # Главное приложение
-└── requirements.txt        # Зависимости
+veya/
+├── eye_tracker.py          # Eye tracking with MediaPipe
+├── calibration_manager.py  # Coordinate calibration
+├── drawing_canvas.py       # Drawing canvas
+├── main.py                 # Main application
+└── requirements.txt        # Dependencies
 ```
 
-### Компоненты
+### Components / Компоненты
 
 #### `EyeTracker`
-- Использует **MediaPipe Face Mesh** для детекции глаз
-- Отслеживает iris (радужку) для точного определения направления взгляда
-- Сглаживание координат для стабильного курсора
+- Uses **MediaPipe Face Mesh** for eye detection / Использует **MediaPipe Face Mesh** для детекции глаз
+- Tracks iris for precise gaze direction / Отслеживает iris (радужку) для точного определения направления взгляда
+- Coordinate smoothing for stable cursor / Сглаживание координат для стабильного курсора
 
 #### `CalibrationManager`
-- 9-точечная калибровка для точного маппинга
-- Homography transform для perspective correction
-- Автоматический переход к рисованию после калибровки
+- 9-point calibration for accurate mapping / 9-точечная калибровка для точного маппинга
+- Homography transform for perspective correction / Homography transform для perspective correction
+- Automatic transition to drawing after calibration / Автоматический переход к рисованию после калибровки
 
 #### `DrawingCanvas`
-- Dwell-based interaction (задержка взгляда для активации)
-- Сглаженное рисование с настраиваемой толщиной
-- Отмена штрихов, очистка, сохранение
+- Dwell-based interaction (gaze hold for activation) / Dwell-based interaction (задержка взгляда для активации)
+- Smooth drawing with adjustable thickness / Сглаженное рисование с настраиваемой толщиной
+- Stroke undo, clear, and save / Отмена штрихов, очистка, сохранение
 
-## 🔧 Технологии
+## 🔧 Technologies / Технологии
 
 - **Python 3.8+**
-- **OpenCV** - обработка видео
-- **MediaPipe** - детекция лица и глаз
-- **Pygame** - GUI и рисование
-- **NumPy/SciPy** - математические трансформации
+- **OpenCV** - Video processing / Обработка видео
+- **MediaPipe** - Face and eye detection / Детекция лица и глаз
+- **Pygame** - GUI and drawing / GUI и рисование
+- **NumPy/SciPy** - Mathematical transformations / Математические трансформации
 
-## 📝 История проекта
+## 📝 Project History / История проекта
+
+The original **EyeWriter** project was created in C++ using OpenFrameworks. This version is a complete port to Python with modern computer vision libraries.
 
 Оригинальный проект **EyeWriter** был создан на C++ с использованием OpenFrameworks. Данная версия - полный порт на Python с современными computer vision библиотеками.
 
-### Что изменилось от оригинала:
+### Changes from Original / Что изменилось от оригинала:
 - ✅ C++/OpenFrameworks → Python/MediaPipe
-- ✅ Ручная детекция pupil/glint → MediaPipe iris tracking
-- ✅ Сложная настройка → работает из коробки
-- ✅ Требует IR камеру → работает с обычной веб-камерой
+- ✅ Manual pupil/glint detection → MediaPipe iris tracking / Ручная детекция pupil/glint → MediaPipe iris tracking
+- ✅ Complex setup → Works out of the box / Сложная настройка → работает из коробки
+- ✅ Requires IR camera → Works with regular webcam / Требует IR камеру → работает с обычной веб-камерой
 
-## 🎯 Применение
+## 🎯 Applications / Применение
 
-- **Assistive Technology** - для людей с ДЦП, ALS, травмами спинного мозга
-- **Образование** - обучение работе с компьютером
-- **Творчество** - создание цифрового искусства без рук
-- **Коммуникация** - печать текста, управление приложениями
+- **Assistive Technology** - For people with cerebral palsy, ALS, spinal cord injuries / Для людей с ДЦП, ALS, травмами спинного мозга
+- **Education** - Computer skills training / Обучение работе с компьютером
+- **Creativity** - Creating digital art hands-free / Создание цифрового искусства без рук
+- **Communication** - Text input, application control / Печать текста, управление приложениями
 
-## 📊 Производительность
+## 📊 Performance / Производительность
 
-- **FPS**: 30 (настраивается)
-- **Latency**: ~50ms от движения глаз до курсора
-- **Точность**: зависит от калибровки, обычно ±20-30px
+- **FPS**: 30 (adjustable / настраивается)
+- **Latency**: ~50ms from eye movement to cursor / ~50ms от движения глаз до курсора
+- **Accuracy**: Depends on calibration, typically ±20-30px / Зависит от калибровки, обычно ±20-30px
 
-## 🤝 Вклад в проект
+## 🤝 Contributing / Вклад в проект
 
-Проект open source. Pull requests приветствуются!
+Open source project. Pull requests welcome! / Проект open source. Pull requests приветствуются!
 
 ### TODO
-- [ ] Режим печати текста (виртуальная клавиатура)
-- [ ] Улучшенная калибровка (больше точек, автоматическая)
-- [ ] Поддержка разных drawing modes (линии, фигуры, заливка)
-- [ ] Экспорт в разные форматы (SVG, PDF)
-- [ ] Raspberry Pi версия для автономной работы
+- [ ] Text typing mode (virtual keyboard) / Режим печати текста (виртуальная клавиатура)
+- [ ] Enhanced calibration (more points, automatic) / Улучшенная калибровка (больше точек, автоматическая)
+- [ ] Multiple drawing modes (lines, shapes, fill) / Поддержка разных drawing modes (линии, фигуры, заливка)
+- [ ] Export to different formats (SVG, PDF) / Экспорт в разные форматы (SVG, PDF)
+- [ ] Raspberry Pi version for standalone operation / Raspberry Pi версия для автономной работы
 
-## 📄 Лицензия
+## 📄 License / Лицензия
 
-Open Source - используйте свободно для помощи людям.
+Open Source - free to use for helping people / Open Source - используйте свободно для помощи людям.
 
-## 👤 Автор
+## 👤 Author / Автор
 
 Nurtas Ulagat
+
+Created for **nFactorial Incubator 2026**
 
 **Contact**: nurtasulagat@gmail.com
 
 ---
 
 > "Technology should be accessible to everyone, regardless of physical abilities."
+> "Технология должна быть доступна всем, независимо от физических возможностей."

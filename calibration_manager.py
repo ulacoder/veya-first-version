@@ -1,6 +1,8 @@
 """
-Calibration Manager - KozbenSal
+Calibration Manager - Veya
 Maps eye coordinates to screen coordinates through calibration process.
+
+Veya is an eye-tracking drawing application for people with motor disabilities.
 """
 
 import cv2

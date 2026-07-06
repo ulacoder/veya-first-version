@@ -1,6 +1,8 @@
 """
-Drawing Scene - KozbenSal
+Drawing Scene - Veya
 Main drawing interface with eye-controlled cursor.
+
+Veya is an eye-tracking drawing application for people with motor disabilities.
 """
 
 import pygame

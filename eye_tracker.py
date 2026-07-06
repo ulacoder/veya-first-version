@@ -1,7 +1,9 @@
 """
-Eye Tracker Module - KozbenSal
+Eye Tracker Module - Veya
 Detects and tracks eye movements using computer vision.
 Port from EyeWriter C++ to Python.
+
+Veya is an eye-tracking drawing application for people with motor disabilities.
 """
 
 import cv2

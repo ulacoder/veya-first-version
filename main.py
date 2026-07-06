@@ -1,6 +1,9 @@
 """
-KozbenSal - Eye Tracking Drawing Application
+Veya - Eye Tracking Drawing Application
 Main application integrating eye tracking, calibration, and drawing.
+
+Veya is an eye-tracking drawing application that empowers people with motor
+disabilities to create art and control computers using only their eye movements.
 """
 
 import pygame
@@ -21,12 +24,12 @@ class AppMode(Enum):
     DRAWING = 1
 
 
-class KozbenSalApp:
+class VeyaApp:
     """Main application class."""
 
     def __init__(self, screen_width: int = 1024, screen_height: int = 768):
         """
-        Initialize KozbenSal application.
+        Initialize Veya application.
 
         Args:
             screen_width: Window width
@@ -38,7 +41,7 @@ class KozbenSalApp:
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.screen = pygame.display.set_mode((screen_width, screen_height))
-        pygame.display.set_caption("KozbenSal - Eye Tracking Drawing")
+        pygame.display.set_caption("Veya - Eye Tracking Drawing")
 
         self.clock = pygame.time.Clock()
         self.fps = 30
@@ -276,7 +279,7 @@ class KozbenSalApp:
         if not self.start():
             return
 
-        print("KozbenSal started")
+        print("Veya started")
         print("Controls:")
         print("  TAB - Switch between calibration and drawing")
         print("  R - Reset calibration")
@@ -299,7 +302,7 @@ class KozbenSalApp:
 
 def main():
     """Entry point."""
-    app = KozbenSalApp(1024, 768)
+    app = VeyaApp(1024, 768)
     app.run()
 
 
