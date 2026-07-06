@@ -1,0 +1,10 @@
+Component,Description,Quantity,Unit Price (USD),Total Price (USD),Supplier Link
+Raspberry Pi 4 (4GB RAM),Single-board computer for AI inference,1,211.00,211.00,https://kaspi.kz/shop/p/raspberry-pi-4-model-b-4gb-101436418/
+Pi Camera Module v2,8MP camera sensor for eye imaging,1,51.00,51.00,https://kaspi.kz/shop/p/modul-kamery-raspberry-pi-camera-module-v2-8mp-167201943/
+Power Bank 10000mAh,Portable battery 5V/3A for mobile operation,1,18.00,18.00,Local electronics store (Almaty)
+MicroSD Card 32GB,SanDisk Class 10 for OS and datasets,1,22.00,22.00,https://kaspi.kz/shop/p/sandisk-sdsqunr-032g-gn3ma-32gb-101499707/
+3D Printed Frame (PLA),Glasses frame structure (~50g filament),1,8.00,8.00,Local 3D printing service or makerspace
+USB-C Cable,Power cable for Raspberry Pi 4,1,5.00,5.00,Local electronics store (1000 мелочей)
+Mounting Hardware,Screws/velcro straps/adhesive for assembly,1,3.00,3.00,Local hardware store (1000 мелочей)
+Heatsink Kit,Cooling for Raspberry Pi under AI inference load,1,6.00,6.00,Included with Pi or local supplier
+,,,,TOTAL: $324.00,
