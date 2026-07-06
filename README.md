@@ -139,8 +139,6 @@ Open Source - free to use for helping people / Open Source - используй�
 
 Nurtas Ulagat
 
-Created for **nFactorial Incubator 2026**
-
 **Contact**: nurtasulagat@gmail.com
 
 ---
