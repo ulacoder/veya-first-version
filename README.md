@@ -131,6 +131,22 @@ Open source project. Pull requests welcome! / Проект open source. Pull req
 - [ ] Export to different formats (SVG, PDF) / Экспорт в разные форматы (SVG, PDF)
 - [ ] Raspberry Pi version for standalone operation / Raspberry Pi версия для автономной работы
 
+## 🔮 Future Vision: Veya v2 - Eye Disease Detection / Будущее: Veya v2 - Диагностика глазных болезней
+
+**Next evolution: From assistive drawing to medical screening**
+
+Следующая эволюция проекта — трансформация в AI-powered smart glasses для диагностики глазных заболеваний:
+
+### Goals / Цели:
+- **AI Disease Detection** - Detect cataracts, conjunctivitis, pterygium using computer vision / Диагностика катаракты, конъюнктивита, птеригиума с помощью компьютерного зрения
+- **Raspberry Pi-based** - Portable, wearable form factor with edge AI / Портативный формат в виде очков с edge AI
+- **Accessible Screening** - Bring eye health screening to underserved communities in Central Asia / Доступный скрининг для удаленных регионов Центральной Азии
+- **Affordable Healthcare** - <$350 device vs $10,000+ professional equipment / <$350 устройство vs $10,000+ профессиональное оборудование
+
+**Status**: Hardware design & AI model training in progress (NASA SEES x Stardance Summer 2026)
+
+**Статус**: Разработка железа и обучение AI модели в процессе (NASA SEES x Stardance лето 2026)
+
 ## 📄 License / Лицензия
 
 Open Source - free to use for helping people / Open Source - используйте свободно для помощи людям.
