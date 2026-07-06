@@ -132,9 +132,9 @@ Open Source - используйте свободно для помощи люд
 
 ## 👤 Автор
 
-Создано для **nFactorial Incubator 2026**
+Nurtas Ulagat
 
-**Contact**: ulagatnurtas10@gmail.com
+**Contact**: nurtasulagat@gmail.com
 
 ---
 
